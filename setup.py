@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='tp_gmm ',
+    name='tp_gmm',
     version='0.1.0',
     description='Task Parameterized Gaussian Mixture Models',
     author='Giovanni Franzese, BatyaGG',
