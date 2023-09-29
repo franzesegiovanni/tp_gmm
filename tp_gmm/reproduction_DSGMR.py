@@ -2,9 +2,9 @@ import numpy as np
 from .rClass import r
 from .computeResultingGaussians import computeResultingGaussians
 from .gaussPDFfast import gaussPDFfast
-def reproduction_DSGMR(DataIn, model, rr, currPos):
+def reproduction_DSGMR(DataIn, model, rr, currPos, dt = 0.01):
     # DataIn = np.linspace(np.amin(DataIn), np.amax(DataIn), np.shape(DataIn)[0])
-    model.dt = 0.01
+    model.dt = dt
     model.kP = 150
     model.kV = 20
     DataIn = np.reshape(DataIn, newshape=(1, np.shape(DataIn)[0]))

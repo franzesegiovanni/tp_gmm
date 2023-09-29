@@ -13,9 +13,10 @@ class TPGMM_GMR(object):
         self.s = s
         self.model = init_proposedPGMM_timeBased(s, self.model)
         self.model = EM_tensorGMM(s, self.model)
+        self.model.dt = 0.01
 
-    def reproduce(self, p, currentPosition):
-        return reproduction_DSGMR(self.s[0].Data[0,:], self.model, p, currentPosition)
+    def reproduce(self, p, currentPosition, dt = 0.01):
+        return reproduction_DSGMR(self.s[0].Data[0,:], self.model, p, currentPosition, dt)
 
     def plotReproduction(self, r, xaxis, yaxis, ax, showGaussians = True, lw = 7):
         for m in range(r.p.shape[0]):
