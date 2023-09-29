@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from .gaussPDFfast import gaussPDFfast
+import sys
 def EM_tensorGMM(s, model):
     nbMinSteps = 5
     nbMaxSteps = 100
@@ -48,8 +50,6 @@ def EM_tensorGMM(s, model):
     return model
 
 def computeGamma(Data, model):
-    from gaussPDFfast import gaussPDFfast
-    import sys
     realmin = sys.float_info[3]
     nbData = np.shape(Data)[2]
     Lik = np.ones((model.nbStates, nbData))

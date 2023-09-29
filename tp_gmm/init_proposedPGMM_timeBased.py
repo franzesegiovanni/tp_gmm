@@ -1,6 +1,6 @@
 import numpy as np
-from refClass import ref
-from modelClass import model
+from .refClass import ref
+from .modelClass import model
 def init_proposedPGMM_timeBased(s, modelcur):
 
     diagRegularizationFactor = 0.0001

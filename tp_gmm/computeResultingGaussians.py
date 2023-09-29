@@ -1,6 +1,6 @@
 import numpy as np
 from numpy import linalg
-from prodResClass import prodRes
+from .prodResClass import prodRes
 def computeResultingGaussians(model, pp):
     prodResList = []
     for t in range (0,np.shape(pp)[1]):

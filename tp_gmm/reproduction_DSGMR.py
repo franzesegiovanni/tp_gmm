@@ -1,8 +1,7 @@
 import numpy as np
-from sklearn import tree
-from rClass import r
-from computeResultingGaussians import computeResultingGaussians
-from gaussPDFfast import gaussPDFfast
+from .rClass import r
+from .computeResultingGaussians import computeResultingGaussians
+from .gaussPDFfast import gaussPDFfast
 def reproduction_DSGMR(DataIn, model, rr, currPos):
     # DataIn = np.linspace(np.amin(DataIn), np.amax(DataIn), np.shape(DataIn)[0])
     model.dt = 0.01

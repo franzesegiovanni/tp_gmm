@@ -1,8 +1,8 @@
-from modelClass import model
-from init_proposedPGMM_timeBased import init_proposedPGMM_timeBased
-from EM_tensorGMM import EM_tensorGMM
-from reproduction_DSGMR import reproduction_DSGMR
-from plotGMM import plotGMM
+from .modelClass import model
+from .init_proposedPGMM_timeBased import init_proposedPGMM_timeBased
+from .EM_tensorGMM import EM_tensorGMM
+from .reproduction_DSGMR import reproduction_DSGMR
+from .plotGMM import plotGMM
 import numpy as np
 
 class TPGMM_GMR(object):
